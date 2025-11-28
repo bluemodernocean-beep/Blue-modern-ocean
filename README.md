@@ -1,2 +1,367 @@
 # Blue-modern-ocean
-Html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUE MODERN OCEAN - The Future Begins Now</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte e o tema de cores - TEMA AZUL UNIFORME E BOLD */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f3b7c; /* Azul Oceano Profundo e Rico */
+            color: #E0E7FF; /* Texto levemente azulado/claro para contraste */
+            transition: all 0.3s ease-in-out;
+            font-weight: 500; /* Padrão de texto levemente mais forte */
+        }
+
+        /* Estilo para o cabeçalho principal, usando um azul mais escuro no topo */
+        .hero-background {
+            /* Fundo da Home agora é APENAS A COR SÓLIDA */
+            background-color: #0f3b7c; /* Usa a cor de fundo principal para consistência */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Classe para esconder as seções não ativas */
+        .secao-conteudo {
+            display: none;
+            padding: 2rem 1rem;
+            min-height: 70vh;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Estilo para o link de navegação ativo - COR DE CLIQUE (VERDE/AQUA) */
+        .nav-link.active {
+            color: #64ffda; /* Aqua claro para destaque - COR DE CLIQUE */
+            border-bottom: 2px solid #64ffda;
+            font-weight: 700; /* Mais bold quando ativo */
+        }
+
+        /* Animação simples de fade in para a transição de conteúdo */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Estilo para os botões e cards de destaque */
+        .card-effect {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app" class="max-w-7xl mx-auto">
+        
+        <header class="sticky top-0 z-50 bg-[#0f3b7c]/90 backdrop-blur-sm shadow-xl rounded-b-xl px-4 sm:px-6 lg:px-8 border-b border-[#64ffda]">
+            <nav class="flex flex-col sm:flex-row justify-between items-center py-4">
+                <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                    <h1 class="text-3xl font-extrabold text-[#E0E7FF]">
+                        BLUE MODERN <span class="text-[#64ffda]">OCEAN</span>
+                    </h1>
+                </div>
+                
+                <div id="menu-navegacao" class="flex flex-wrap justify-center space-x-2 sm:space-x-6 text-sm font-bold">
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="home">
+                        Home
+                    </button>
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="sobre">
+                        Sobre
+                    </button>
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="membros">
+                        Membros
+                    </button>
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="horarios">
+                        Horários
+                    </button>
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="slides">
+                        Slides
+                    </button>
+                    <button class="nav-link p-2 uppercase tracking-wider transition duration-300 hover:text-[#64ffda]" data-view="contato">
+                        Contato
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mt-4">
+            
+            <section id="home" class="secao-conteudo text-center pt-16 pb-8 hero-background rounded-b-xl shadow-2xl">
+                <div class="max-w-4xl mx-auto p-4">
+                    <h2 class="text-6xl sm:text-8xl font-black mb-2 text-[#E0E7FF]">
+                        BLUE MODERN OCEAN
+                    </h2>
+                    <p class="text-xl text-[#64ffda] font-extrabold mb-6">
+                        The future begins now!
+                    </p>
+                    <p class="text-lg text-[#E0E7FF] font-semibold mb-8 max-w-2xl mx-auto">
+                        Criamos soluções tecnológicas inspiradas no oceano — estética imersiva e tecnologia sustentável. O futuro pode ser azul, vivo e pulsante.
+                    </p>
+                    
+                    <div class="flex justify-center space-x-4 mb-10">
+                        <button class="nav-link p-3 rounded-lg font-extrabold bg-[#64ffda] text-[#0f3b7c] hover:bg-[#52d2b5] transition duration-300" data-view="sobre">
+                            Sobre
+                        </button>
+                        <button class="nav-link p-3 rounded-lg font-extrabold bg-transparent border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0f3b7c] transition duration-300" data-view="membros">
+                            Membros
+                        </button>
+                        <button class="nav-link p-3 rounded-lg font-extrabold bg-transparent border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0f3b7c] transition duration-300" data-view="slides">
+                            Slides
+                        </button>
+                        <button class="nav-link p-3 rounded-lg font-extrabold bg-transparent border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0f3b7c] transition duration-300" data-view="contato">
+                            Contato
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+                        
+                        <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border-2 border-[#64ffda]/50 p-6">
+                            <h3 class="text-2xl font-extrabold text-[#64ffda] mb-2">Inovação de Experiência</h3>
+                            <p class="text-sm font-medium text-[#E0E7FF]">Criamos projetos que transcendem a máquina, focando na estética futurista e design imersivo para criar momentos únicos.</p>
+                            <img src="https://placehold.co/600x400/0f3b7c/64ffda?text=INOVAÇÃO" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f3b7c/64ffda?text=INOVAÇÃO';" alt="Inovação de Experiência" class="w-full h-auto object-cover rounded-lg mt-3 opacity-80">
+                        </div>
+
+                        <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border-2 border-[#64ffda]/50 p-6">
+                            <h3 class="text-2xl font-extrabold text-[#64ffda] mb-2">Consciência Ambiental</h3>
+                            <p class="text-sm font-medium text-[#E0E7FF]">Tecnologia e criatividade unidas por um impacto real, inspiradas no poder e na sustentabilidade do oceano.</p>
+                            <img src="https://placehold.co/600x400/0f3b7c/64ffda?text=AMBIENTAL" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f3b7c/64ffda?text=AMBIENTAL';" alt="Consciência Ambiental" class="w-full h-auto object-cover rounded-lg mt-3 opacity-80">
+                        </div>
+                        
+                        <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border-2 border-[#64ffda]/50 p-6">
+                            <h3 class="text-2xl font-extrabold text-[#64ffda] mb-2">Harmonia com o Futuro</h3>
+                            <p class="text-sm font-medium text-[#E0E7FF]">Nossa missão é guiar o desenvolvimento tecnológico mantendo a fluidez, o brilho e o equilíbrio da natureza.</p>
+                            <img src="https://placehold.co/600x400/0f3b7c/64ffda?text=HARMONIA" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f3b7c/64ffda?text=HARMONIA';" alt="Harmonia com o Futuro" class="w-full h-auto object-cover rounded-lg mt-3 opacity-80">
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre" class="secao-conteudo max-w-4xl mx-auto">
+                <h2 class="text-4xl font-extrabold mb-6 text-center text-[#64ffda]">Sobre a BLUE MODERN OCEAN</h2>
+                <div class="bg-[#1e509c] p-8 rounded-xl shadow-2xl border-t-4 border-[#64ffda] font-semibold">
+                    <p class="text-[#E0E7FF] leading-relaxed mb-4">
+                        A Blue Modern Ocean nasceu da ideia de que o futuro não precisa ser cinza, metálico ou distante — ele pode ser azul, vivo e pulsante. Somos uma equipe que une tecnologia, criatividade e consciência ambiental para construir soluções inspiradas no lugar mais misterioso e poderoso do planeta: o oceano.
+                    </p>
+                    <p class="text-[#E0E7FF] leading-relaxed mb-4">
+                        Acreditamos que inovação de verdade não é só criar máquinas, mas criar experiências. Por isso, desenvolvemos projetos que misturam estética futurista, design imersivo e tecnologia sustentável, sempre guiados pela harmonia entre natureza e futuro. Nossa missão é mostrar que o amanhã pode ser luminoso, fluido e orgânico — exatamente como a água.
+                    </p>
+                    <p class="text-[#E0E7FF] leading-relaxed mb-4">
+                        Na Blue Modern Ocean, cada ideia nasce como uma gota, cresce como uma onda e se transforma em impacto real. Somos movidos pela curiosidade, pelo brilho do desconhecido e pela certeza de que o futuro começa agora — The future begins now.
+                    </p>
+                    <p class="text-[#64ffda] font-extrabold text-lg text-center mt-6">
+                        Aqui, o oceano encontra a tecnologia. E juntos, eles criam o novo.
+                    </p>
+                </div>
+            </section>
+
+            <section id="membros" class="secao-conteudo max-w-6xl mx-auto">
+                <h2 class="text-4xl font-extrabold mb-10 text-center text-[#64ffda]">Conheça a Liderança e Equipe da BLUE MODERN OCEAN</h2>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=C.S" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=C.S';" alt="Carol Sposito" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Carol Sposito</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">CEO</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=A.E" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=A.E';" alt="Anne Emanuely" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Anne Emanuely</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">COO</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=A.P" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=A.P';" alt="Arthur Pires" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Arthur Pires</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Especialista em Projetos</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=V.S" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=V.S';" alt="Vinicius Souza" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Vinicius Souza</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Chefe de Tecnologia</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=M.C" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=M.C';" alt="Maryanne Cristina" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Maryanne Cristina</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Diretora da Sustentabilidade e Meio Ambiente</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=P.L" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=P.L';" alt="Pietra Lis" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Pietra Lis</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Chefe da Sustentabilidade e Meio Ambiente</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=O.M" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=O.M';" alt="Otavio Maciel" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Otavio Maciel</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Engenheiro Chefe</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=E.R" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=E.R';" alt="Enzo Ramos" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Enzo Ramos</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Dir. Engenharia Mecânica</p>
+                    </div>
+
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=P.D" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=P.D';" alt="Pietra Dias" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Pietra Dias</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Diretora Econômica</p>
+                    </div>
+                    
+                    <div class="card-effect bg-[#1e509c] rounded-xl overflow-hidden shadow-2xl border border-[#3b82f6]/30 p-4 text-center">
+                        <img src="https://placehold.co/100x100/3b82f6/ffffff?text=V.C" onerror="this.onerror=null;this.src='https://placehold.co/100x100/3b82f6/ffffff?text=V.C';" alt="Vitor César" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover border-4 border-[#64ffda]">
+                        <h3 class="text-lg font-bold text-[#E0E7FF]">Vitor César</h3>
+                        <p class="text-[#64ffda] text-sm font-semibold">Chefe de Relações Públicas</p>
+                    </div>
+                    
+                </div>
+                <p class="text-center text-[#9ca3af] text-sm mt-8">Lembre-se de substituir as imagens de placeholder pelas fotos reais dos membros!</p>
+            </section>
+            
+            <section id="horarios" class="secao-conteudo max-w-4xl mx-auto">
+                <h2 class="text-4xl font-extrabold mb-10 text-center text-[#64ffda]">Agenda de Eventos BLUE MODERN OCEAN</h2>
+
+                <div class="bg-[#1e509c] p-8 rounded-xl shadow-2xl border-l-4 border-[#64ffda]">
+                    <h3 class="text-2xl font-bold mb-4 text-[#E0E7FF]">Evento Principal: Apresentação de Projetos</h3>
+                    
+                    <dl class="space-y-4 text-lg font-semibold">
+                        
+                        <div class="flex flex-col sm:flex-row justify-between items-center p-4 bg-[#0f3b7c] rounded-lg border-l-4 border-[#64ffda]">
+                            <dt class="font-extrabold text-[#E0E7FF] w-full sm:w-1/3">Data:</dt>
+                            <dd class="text-[#E0E7FF] w-full sm:w-2/3 text-right">02/12 a 04/12</dd>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-between items-center p-4 bg-[#0f3b7c] rounded-lg border-l-4 border-[#64ffda]">
+                            <dt class="font-extrabold text-[#E0E7FF] w-full sm:w-1/3">Local:</dt>
+                            <dd class="text-[#E0E7FF] w-full sm:w-2/3 text-right">Sala 413</dd>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row justify-between items-center p-4 bg-[#0f3b7c] rounded-lg border-l-4 border-[#64ffda]">
+                            <dt class="font-extrabold text-[#E0E7FF] w-full sm:w-1/3">Horário (02/12 a 04/12):</dt>
+                            <dd class="text-[#E0E7FF] w-full sm:w-2/3 text-right">07:00 às 12:30</dd>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row justify-between items-center p-4 bg-[#0f3b7c] rounded-lg border-l-4 border-[#64ffda]">
+                            <dt class="font-extrabold text-[#E0E7FF] w-full sm:w-1/3">Horário (05/12 - Sexta):</dt>
+                            <dd class="text-[#E0E7FF] w-full sm:w-2/3 text-right">07:00 às 10:00</dd>
+                        </div>
+                    </dl>
+                    
+                    <p class="text-center text-[#9ca3af] text-sm mt-6">
+                        Este é um evento presencial exclusivo para a apresentação de resultados e estratégias da BMO.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slides" class="secao-conteudo max-w-4xl mx-auto">
+                <h2 class="text-4xl font-extrabold mb-10 text-center text-[#64ffda]">Acesso à Apresentação Oficial (Canva)</h2>
+
+                <div class="bg-[#1e509c] p-8 rounded-xl shadow-2xl border-t-4 border-[#64ffda] text-center">
+                    <p class="text-[#E0E7FF] font-semibold mb-6">
+                        Acesse a apresentação completa dos nossos projetos e conceitos visuais através do link do Canva. O conteúdo está configurado para uma visualização otimizada.
+                    </p>
+                    
+                    <a href="https://www.canva.com/design/DAGy3QOO6yw/FwiNdxt6-plDdfWQgzou-g/edit?utm_content=DAGy3QOO6yw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-extrabold rounded-lg shadow-lg text-[#0f3b7c] bg-[#64ffda] hover:bg-[#52d2b5] transition duration-300 transform hover:scale-105">
+                        Ver Slides da Apresentação
+                    </a>
+                    
+                    <p class="text-[#9ca3af] text-sm mt-6">
+                        (O link abrirá em uma nova aba. Certifique-se de ter acesso à apresentação.)
+                    </p>
+                </div>
+            </section>
+
+            <section id="contato" class="secao-conteudo">
+                <div class="max-w-xl mx-auto p-8 bg-[#1e509c] rounded-xl shadow-2xl border-t-4 border-[#64ffda]">
+                    <h2 class="text-3xl font-extrabold mb-6 text-center text-[#64ffda]">Entre em Contato com a BMO</h2>
+                    
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Seu Nome Completo" class="w-full p-3 border border-[#3b82f6] bg-[#0f3b7c] text-[#E0E7FF] rounded-lg focus:ring-[#64ffda] focus:border-[#64ffda] transition duration-150" required>
+                        
+                        <input type="email" placeholder="Seu Melhor Email" class="w-full p-3 border border-[#3b82f6] bg-[#0f3b7c] text-[#E0E7FF] rounded-lg focus:ring-[#64ffda] focus:border-[#64ffda] transition duration-150" required>
+                        
+                        <textarea placeholder="Sua Mensagem e Motivo de Contato" rows="5" class="w-full p-3 border border-[#3b82f6] bg-[#0f3b7c] text-[#E0E7FF] rounded-lg focus:ring-[#64ffda] focus:border-[#64ffda] transition duration-150" required></textarea>
+                        
+                        <button type="submit" class="w-full bg-[#64ffda] text-[#0f3b7c] p-3 rounded-lg font-extrabold hover:bg-[#52d2b5] transition duration-200 shadow-md">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6 pt-4 border-t border-[#3b82f6] text-center">
+                        <p class="text-[#E0E7FF] font-semibold">Canais Diretos:</p>
+                        <p class="text-lg font-extrabold text-[#64ffda]">Instagram: blue.modern.ocean</p>
+                        <p class="text-lg font-extrabold text-[#64ffda]">Email: bluemodernocean@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="mt-12 text-center text-[#E0E7FF] font-semibold text-sm p-6 border-t border-[#1e509c]">
+            &copy; 2025 BLUE MODERN OCEAN. Todos os direitos reservados.
+        </footer>
+
+    </div>
+
+    <script>
+        // Função principal para manipular a visibilidade das seções e o estado ativo dos botões
+        function mostrarSecao(viewName) {
+            // 1. Esconde todas as seções
+            document.querySelectorAll('.secao-conteudo').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 2. Remove o estilo 'active' de todos os links de navegação
+            document.querySelectorAll('.nav-link').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // 3. Mostra a seção solicitada (com a animação via CSS)
+            const targetSection = document.getElementById(viewName);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            } else {
+                console.error('Erro: Seção não encontrada:', viewName);
+                return;
+            }
+
+            // 4. Marca o botão de navegação correspondente como 'active'
+            // CORREÇÃO: Usando crases (`) para o template literal no seletor CSS.
+            const activeButton = 
+            document.querySelector('.nav-link[data-view="${viewName}"]');
+            }
+        }
+
+        // Adiciona event listeners aos botões de navegação quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-link');
+            
+            navButtons.forEach(button => {
+                // Adiciona o listener de clique
+                button.addEventListener('click', (event) => {
+                    const view = event.currentTarget.getAttribute('data-view');
+                    mostrarSecao(view);
+                });
+            });
+
+            // Inicia mostrando a seção 'home' por padrão
+            const initialView = window.location.hash ? window.location.hash.substring(1) : 'home';
+            mostrarSecao(initialView);
+        });
+    </script>
+
+</body>
+</html>
