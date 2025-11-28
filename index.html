@@ -338,12 +338,14 @@
                 return;
             }
 
-            // 4. Marca o botão de navegação correspondente como 'active'
-            // CORREÇÃO: Usando crases (`) para o template literal no seletor CSS.
+            // 4. Marca o botão de navegação correspondente como 'active' (CORRIGIDO)
             const activeButton = 
-            document.querySelector('.nav-link[data-view="${viewName}"]');
+            document.querySelector(`.nav-link[data-view="${viewName}"]`);
+
+            if (activeButton) {
+                activeButton.classList.add('active');
             }
-        }
+        } 
 
         // Adiciona event listeners aos botões de navegação quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', () => {
